@@ -56,21 +56,8 @@ Step 1: Authenticate and Obtain JWT Token
 Open Postman and create a new request.
 
 Set the request type to POST.
-
-Enter the URL: http://localhost:8080/authenticate.
-
 Go to the Body tab, select raw and choose JSON from the dropdown.
 
-Enter the authentication credentials in JSON format:
-{
-  "username": "student",
-  "password": "password"
-}
-Click Send to submit the request.
-
-Copy the JWT token from the response body.
-
-Step 2: Use JWT Token to Access Secured Endpoints
 Create a Student
 Create a new request in Postman.
 
@@ -79,9 +66,6 @@ Set the request type to POST.
 Enter the URL: http://localhost:8080/api/students.
 
 Go to the Headers tab and add a header with:
-
-Key: Authorization
-Value: Bearer your_jwt_token_here (replace your_jwt_token_here with the token you received)
 Go to the Body tab, select raw and choose JSON.
 
 Enter the student data:
@@ -103,5 +87,7 @@ Set the request type to GET.
 Enter the URL: http://localhost:8080/api/subjects.
 Go to the Headers tab and add the Authorization header as before.
 Click Send to retrieve the list of subjects.
+
+*Note - Spring Jwt and Security part is not done yet but others are running.
 
 
